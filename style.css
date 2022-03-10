@@ -1,0 +1,423 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)), url(eduford_img/eduford_img/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 3%, 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    padding: 50px 0px 5px 80px;
+    width: 200px;
+}
+
+.nav-link{
+    padding: 30px 150px 0px 0px;
+    flex: 1;
+    text-align: right;
+}
+.nav-link ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    margin-right: 50px;
+    position: relative;
+}
+
+.nav-link ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    
+}
+
+.nav-link ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    opacity: 0.8;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-link ul li a:hover::after{
+    width: 100%;
+    
+}
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 34px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    font-size: 13px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+
+    .nav-link ul li{
+        display: block;
+    }
+    nav .logo{
+        position: relative;
+        top: 9px;
+        right: 40px;
+        width: 170px;
+    }
+    .nav-link{
+        background: #f44336;
+        position: absolute;
+        height: 95.3vh;
+        width: 200px;
+        top: 0;
+        right: -350px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-link ul{
+        padding: 30px;
+
+    }
+}
+
+/*----- course -----*/
+
+.course{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    font-size: 14px;
+    color: #777;
+    font-weight: 300;
+    padding: 10px;
+    line-height: 22px;
+}
+
+.row{
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+}
+
+.course-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    background: #fff3f3;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    padding: 20px 12px;
+    transition: 0.5s;
+}
+
+h3{
+    font-weight: 600;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+/*--- campus -----*/
+
+.campus{
+    margin: auto;
+    width: 80%;
+    padding-top: 50px;
+    text-align: center;  
+}
+
+.campus-col{
+    flex-basis: 32%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgba(226, 0, 0, 0.7);
+}
+
+.layer h3{
+    font-size: 26px;
+    color: #fff;
+    opacity: 0;
+    font-weight: 500;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    position: absolute;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+/* facilities */
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.facilities-col{
+    flex-basis: 31%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    text-align: left;
+    
+}
+
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.facilities-col p{
+    padding: 0;
+    transition: 0.2s;
+}
+
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+    transition: 0.2s;
+}
+
+.facilities-col:hover img{
+    width: 105%;
+}
+
+
+/* Testimonials */
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.testimonial-col{
+    flex-basis: 44%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+    display: flex;
+    background: #fff3f3;
+    transition: 0.6s;
+}
+
+.testimonial-col img{
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.testimonial-col p{
+    padding: 0;
+}
+
+.testimonial-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+.testimonial-col .fa{
+    color: #f44336;
+    cursor: pointer;
+}
+
+.testimonial-col:hover{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* CTA */
+
+.cta{
+    width: 80%;
+    margin: 100px auto;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(eduford_img/eduford_img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0;
+    border-radius: 10px;
+}
+
+.cta h1{
+    color: #fff;
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+@media(max-width=700px){
+    .cta h1{
+        font-size: 22px;
+    }
+}
+
+
+
+/* Footer */
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+.icons .fa{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.fa-heart-o{
+    color: #f44336;
+}
+
+/* Back To Top */
+
+.btt{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.hero-btn1{
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 34px;
+    color: #f44336;
+    background: transparent;
+    font-size: 13px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid rgba(226, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+.hero-btn1:hover{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+
